@@ -1,0 +1,36 @@
+<header class="flex justify-between items-center mb-6">
+  <div class="flex items-center space-x-4">
+    <!-- Sidebar toggle button -->
+    <button 
+      id="open-sidebar" 
+      class="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none" 
+      aria-label="Open sidebar"
+    >
+      <svg 
+        class="w-6 h-6" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24" 
+        aria-hidden="true"
+      >
+        <path 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2" 
+          d="M4 6h16M4 12h16M4 18h16">
+        </path>
+      </svg>
+    </button>
+
+    <!-- Site Title -->
+    <div class="text-3xl font-bold text-gray-800 hidden md:block">
+      CivicStream
+    </div>
+  </div>
+
+  <!-- Auth Buttons -->
+  <div id="auth-buttons" class="flex items-center space-x-4">
+    <button id="login-btn" class="btn-primary">Login</button>
+    <button id="register-btn" class="btn-outline">Register</button>
+  </div>
+</header>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CivicStream - The Ultimate Citizen Reporting Platform</title>
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="public/assets/css/leaflet.css"
+      crossorigin=""
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="public/assets/css/styles.css" />
+  </head>
+  <body class="flex min-h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <!-- Main Content -->
+    <div class="flex-1 main-content p-4 md:p-8 relative">
+      <!-- Header -->
+      <div id="header"></div>
+
+      <main id="main-content-area" class="space-y-8">
+        <!-- Home Content -->
+        <div id="home-content" class="content-block">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 card">
+              <h3 class="text-xl font-semibold mb-4">Live Issue Map</h3>
+              <div class="map-container" id="map"></div>
+            </div>
+            <div class="card">
+              <h3 class="text-xl font-semibold mb-4">Quick Report</h3>
+              <form id="report-form" class="space-y-4">
+                <input
+                  type="file"
+                  id="photo-upload"
+                  class="hidden"
+                  accept="image/*"
+                />
+                <label for="photo-upload" class="upload-label"
+                  >Click or drag photo here</label
+                >c
+                <select
+                  id="issue-type"
+                  name="issue-type"
+                  class="form-input"
+                  aria-label="Issue Type"
+                >
+                  <option value="">Select Issue Type</option>
+                  <option value="pothole">Pothole</option>
+                  <option value="garbage">Garbage</option>
+                </select>
+
+                <input
+                  type="text"
+                  id="location"
+                  class="form-input bg-gray-100"
+                  placeholder="Auto-detecting location..."
+                  readonly
+                />
+                <button type="submit" class="btn-submit">Submit Report</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+
+    <!-- Tailwind (JS that injects CSS) -->
+    <script src="public/assets/js/tailwindcss.js"></script>
+    <!-- Leaflet JS -->
+    <script src="public/assets/js/leaflet.js" crossorigin=""></script>
+    <!-- Firebase SDK -->
+    <script type="module" src="firebase-config.js"></script>
+    <!-- Custom JS -->
+    <script src="public/assets/js/main.js"></script>
+  </body>
+</html>

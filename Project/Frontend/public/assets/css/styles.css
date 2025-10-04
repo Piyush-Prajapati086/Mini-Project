@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  color: #1a202c;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 50;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar.open { transform: translateX(0); }
+
+.main-content { transition: margin-left 0.3s ease-in-out; }
+
+.map-container {
+  height: 60vh;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+              0 2px 4px -1px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+              0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.content-block { animation: fadeIn 0.5s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.leaflet-div-icon { background-color: transparent; border: none; }
+
+.btn-primary {
+  background: #6366f1;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary:hover { background: #4f46e5; transform: scale(1.05); }
+
+.btn-outline {
+  border: 2px solid #6366f1;
+  color: #6366f1;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-outline:hover { background: #6366f1; color: white; }
+
+.btn-submit {
+  width: 100%;
+  background: #4f46e5;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-submit:hover { background: #4338ca; }
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+}
+
+.upload-label {
+  display: block;
+  cursor: pointer;
+  border: 2px dashed #d1d5db;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
+.upload-label:hover { border-color: #6366f1; }
